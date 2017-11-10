@@ -46,6 +46,7 @@ More details can be found in the official [documentation](https://www.tensorflow
 	tensorflow_model_server --port=9000 --model_name=mnist --model_base_path=home/matze/Documents/TensorflowServe/Tensorflow_Serving/export
 ```
 **Note**: You will need to change the `--model_base_path` path to the export directory, according to your local directory. But the path needs to be an absolute path.
+
 3. Run the client: Execute the `client.py` script, to send a request to the server and get it's prediction. The output should look something like:
 ```
 Extracting ../../Data/MNIST_data/train-images-idx3-ubyte.gz
