@@ -38,4 +38,6 @@ def do_inference(dataFrame):
 
 if __name__=="__main__":
     mnist = input_data.read_data_sets("../../Data/MNIST_data",one_hot=True)
+    mnist.test.next_batch(1)
     do_inference(mnist.test.next_batch(1))
+
