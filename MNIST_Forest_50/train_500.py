@@ -73,7 +73,7 @@ print ('MNIST test_labels dataset shape: {}'.format(Y_test.shape))
 
 
 # train a logistic regression model on the training set
-clf = RandomForestClassifier(n_estimators = 50, max_features=28, criterion="gini")
+clf = RandomForestClassifier(n_estimators = 500, max_features=28, criterion="gini")
 print (clf)
 
 clf.fit(X_train,Y_train)
@@ -94,13 +94,10 @@ print("")
 
 # serialize the model on disk in the special 'outputs' folder
 print ("Export the model to model.pkl")
-f = open('./outputs/model.pkl', 'wb')
+f = open('./outputs/model_500.pkl', 'wb')
 pickle.dump(clf, f)
 f.close()
 
-f1 = open('C:/Users/lema/Documents/projects/Azure_ML/model.pkl', 'wb')
-pickle.dump(clf, f1)
-f1.close()
 
 
 # load the model back from the 'outputs' folder into memory
