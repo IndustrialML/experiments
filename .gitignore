@@ -1,7 +1,7 @@
-MNIST_Forest_50/*.pkl
+Azure_ML/*.pkl
 
-MNIST_Forest_50/.azuremlhistory_git
-MNIST_Forest_50/.ipynb_checkpoints
-MNIST_Forest_50/azureml-logs
-MNIST_Forest_50/*.dprep.user
-.vscode/settings.json
+Azure_ML/.azuremlhistory_git
+Azure_ML/.ipynb_checkpoints
+Azure_ML/azureml-logs
+Azure_ML/*.dprep.user
+Azure_ML/.vscode/settings.json
