@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 
 
-def load_mnist(dataset="training", digits=np.arange(10), path="C:/Users/lema/Documents/projects/Azure_ML/data", size = 60000):
+def load_mnist(dataset="training", digits=np.arange(10), path="../data", size = 60000):
     if dataset == "training":
         fname_img = os.path.join(path, 'train-images.idx3-ubyte')
         fname_lbl = os.path.join(path, 'train-labels.idx1-ubyte')
