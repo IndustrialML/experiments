@@ -12,7 +12,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 import numpy as np
 
-from azureml.logging import get_azureml_logger
 
 def load_mnist(dataset="training", digits=np.arange(10), path="C:/Users/lema/Documents/projects/Azure_ML/data", size = 60000):
     if dataset == "training":
@@ -47,8 +46,6 @@ def load_mnist(dataset="training", digits=np.arange(10), path="C:/Users/lema/Doc
     return np.array(images).reshape(-1,784), np.array(labels)
 
 
-# initialize the logger
-logger = get_azureml_logger()
 
 # add experiment arguments
 parser = argparse.ArgumentParser()
@@ -82,8 +79,6 @@ clf.fit(X_train,Y_train)
 accuracy = clf.score(X_test, Y_test)
 print ("Accuracy is {}".format(accuracy))
 
-# log accuracy which is a single numerical value
-logger.log("Accuracy", accuracy)
 
 
 
