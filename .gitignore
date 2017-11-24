@@ -1,0 +1,7 @@
+MNIST_Forest_50/*.pkl
+
+MNIST_Forest_50/.azuremlhistory_git
+MNIST_Forest_50/.ipynb_checkpoints
+MNIST_Forest_50/azureml-logs
+MNIST_Forest_50/*.dprep.user
+.vscode/settings.json
