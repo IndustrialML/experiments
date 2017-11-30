@@ -13,13 +13,13 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 
 
-def load_mnist(dataset="training", digits=np.arange(10), path="../data", size = 60000):
+def load_mnist(dataset="training", digits=np.arange(10), path="C:/Users/matleo/Documents/data", size = 60000):
     if dataset == "training":
-        fname_img = os.path.join(path, 'train-images-idx3-ubyte')
-        fname_lbl = os.path.join(path, 'train-labels-idx1-ubyte')
+        fname_img = os.path.join(path, 'train-images.idx3-ubyte')
+        fname_lbl = os.path.join(path, 'train-labels.idx1-ubyte')
     elif dataset == "testing":
-        fname_img = os.path.join(path, 't10k-images-idx3-ubyte')
-        fname_lbl = os.path.join(path, 't10k-labels-idx1-ubyte')
+        fname_img = os.path.join(path, 't10k-images.idx3-ubyte')
+        fname_lbl = os.path.join(path, 't10k-labels.idx1-ubyte')
     
     else:
         raise ValueError("dataset must be 'testing' or 'training'")
@@ -93,6 +93,11 @@ print ("Export the model to model.pkl")
 f = open('./outputs/model.pkl', 'wb')
 pickle.dump(clf, f)
 f.close()
+
+print ("Local: Export the model to model.pkl")
+f3 = open('C:/Users/matleo/Documents/model_50.pkl', 'wb')
+pickle.dump(clf, f3)
+f3.close()
 
 
 
